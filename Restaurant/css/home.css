@@ -1,0 +1,182 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+}
+body{
+    background-color: wheat;
+    min-height: 100rem;
+    scroll-behavior: smooth;
+    z-index: -10;
+    width: 100%;
+}
+#page1{
+    /* position: relative; */
+    height: 30rem;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: wheat;
+    z-index: 1;
+    width: 100%;
+    /* right: 0PX; */
+}
+#info{
+    width: 16rem;
+    line-height: 1;
+    margin: 2rem;
+    font-size: 24px;
+    font-weight: 500;
+    order: 1;
+    align-self: flex-end ;
+    text-align: right;
+    order: 1;
+}
+#greeting{
+    max-width: 30rem;
+    height: 5rem;
+    margin: 3rem;
+    font-size: 50px;
+    order: 2;
+}
+#blurAnimate{
+    height: 30rem;
+    width: 20rem;
+    position:absolute;
+    top:0rem;
+    
+    right: 0rem;
+    z-index: 1;
+    /* overflow: hidden; */
+    /* background-color: red; */
+    
+}
+.blur{
+    height: 10rem;
+    width: 10rem;
+    background-color: orange;
+    border: 1px solid orange;
+    border-radius: 50%;
+}
+.firstCircle{
+     transform: translate(0rem,0rem);
+     position: relative;
+    filter: blur(6rem);
+    animation: blur1 5s ease-in-out 0s infinite alternate-reverse ;
+}
+.secondCircle{
+    position: relative;
+    filter: blur(6rem);
+    transform: translate(0rem,0rem);
+    animation: blur2 5s ease-in-out 0s infinite alternate-reverse ;
+    
+}
+@keyframes blur1 {
+    from{
+        transform: translate(10rem,20rem);
+    }
+    to{
+      transform: translate(8rem,30rem);
+    }
+    
+}
+@keyframes blur2 {
+    from{
+        transform: translate(-10rem,0rem);
+    }
+    to{
+      transform: translate(-10rem,10rem);
+    }
+    
+}
+#page2{
+    background-color: wheat;
+    height: 50rem;
+    width: 100%;
+}
+#video{
+    width: 80%;
+    height: 48rem;
+    /* border: 2px solid black; */
+    border-radius : 40px; 
+    margin-left: 12rem;
+    
+   
+}
+video{
+ 
+ margin-left: 0rem;
+ width: 100%;
+ height: 48rem;
+}
+#page3{
+    height: 10rem;
+    width: 100%;
+    background-color: wheat;
+    font-size: 77px;
+    font-weight: 900;
+    overflow: hidden;
+
+}
+.movingWord{
+    transform: translate(110rem,0rem);
+    animation: move 5s linear  infinite;
+}
+@keyframes move{
+from{
+    transform: translate(110rem,0rem);
+}
+to{
+    transform: translate(-110rem,0rem);
+}
+}
+#page4{
+    color: rgb(0, 0, 0);
+    height: 40rem;
+    width: 100%;
+    list-style: none;
+    background-color: wheat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.p4h{
+ font-size: 20px;
+ font-weight: 600;
+ align-self: self-start;
+}
+.p4l{
+    align-self: self-end;
+    text-align: center;
+    font-size: 70px;
+    width: 100%;
+    padding-top: 50px;
+}
+li.list:hover{
+  color: white;
+  background-color: black;
+  transition: all 0.5s ease-in-out;
+  padding: 10px;
+}
+#page5{
+    height: 15rem;
+    background-color: wheat;
+    position: absolute;
+    width: 25%;
+    top:105rem;
+    right: 10px;
+    /* display: none; */
+    transition: all .8s ease-in-out;
+}
+#footer{
+    height: 50rem;
+    width: 100%;
+    background-color: black;
+    position:fixed;
+    font-size: 250px;
+    color: white;
+    /* display: none; */
+}
+
